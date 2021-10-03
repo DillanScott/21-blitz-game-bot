@@ -216,11 +216,11 @@ class Blitz21GameAI(gym.Env):
 
 
 
-from stable_baselines3.common.env_checker import check_env
+#from stable_baselines3.common.env_checker import check_env
 
 
 
 env = Blitz21GameAI()
 
-check_env(env)
+#check_env(env)
 
