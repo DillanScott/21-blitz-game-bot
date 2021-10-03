@@ -103,14 +103,14 @@ class Board:
     # Outputs the board to the terminal
     def output(self):
         print('\n')
-        print('|{}|             |{}|             |{}|             |{}|'.format(self.col1.total, self.col2.total, self.col3.total, self.col4.total))
-        print('|{}|          |{}|          |{}|          |{}|'.format(self.col1.cards[0], self.col2.cards[0], self.col3.cards[0], self.col4.cards[0]))
-        print('|{}|          |{}|          |{}|          |{}|'.format(self.col1.cards[1], self.col2.cards[1], self.col3.cards[1], self.col4.cards[1]))
-        print('|{}|          |{}|          |{}|          |{}|'.format(self.col1.cards[2], self.col2.cards[2], self.col3.cards[2], self.col4.cards[2]))
-        print('|{}|          |{}|          |{}|          |{}|'.format(self.col1.cards[3], self.col2.cards[3], self.col3.cards[3], self.col4.cards[3]))
-        print('|{}|          |{}|          |{}|          |{}|'.format(self.col1.cards[4], self.col2.cards[4], self.col3.cards[4], self.col4.cards[4])) 
+        print(f'|{self.col1.total}|             |{self.col2.total}|             |{self.col3.total}|             |{self.col4.total}|')
+        print(f'|{self.col1.cards[0]}|          |{self.col2.cards[0]}|          |{self.col3.cards[0]}|          |{ self.col4.cards[0]}|')  
+        print(f'|{self.col1.cards[1]}|          |{self.col2.cards[1]}|          |{self.col3.cards[1]}|          |{ self.col4.cards[1]}|')  
+        print(f'|{self.col1.cards[2]}|          |{self.col2.cards[2]}|          |{self.col3.cards[2]}|          |{ self.col4.cards[2]}|')  
+        print(f'|{self.col1.cards[3]}|          |{self.col2.cards[3]}|          |{self.col3.cards[3]}|          |{ self.col4.cards[3]}|')  
+        print(f'|{self.col1.cards[4]}|          |{self.col2.cards[4]}|          |{self.col3.cards[4]}|          |{ self.col4.cards[4]}|')   
 
-        print('\nBusts:', self.busts)
-        print('Points:', self.points, '\n')
+        print(f'\nBusts: {self.busts}')
+        print(f'Points: {self.points}\n')
 
 
