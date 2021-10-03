@@ -17,7 +17,7 @@ class DQNAgent():
     
     def __init__(self, env, episodes, epsilon_decay=0.995,
                  state_size=None, action_size=None, epsilon=1.0, epsilon_min=0.01, 
-                 gamma=1, alpha=0.01, alpha_decay=0.01, batch_size=16):
+                 gamma=1, alpha=0.01, alpha_decay=0.01, batch_size=16, render = False):
 
         # Create agent's memory
         self.memory = deque(maxlen = 100000)
@@ -45,6 +45,7 @@ class DQNAgent():
         self.alpha = alpha
         self.alpha_decay = alpha_decay
         self.batch_size = batch_size
+        self.render = render
 
 
         self.model = self._build_model()
@@ -122,7 +123,8 @@ if __name__ == "__main__":
         # done will become False when an individual game ends
         while not done:
 
-            # env.render()
+            if agent.render:
+                env.render()
 
             # Decide on an action
             action = agent.act(state)
