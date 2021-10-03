@@ -97,9 +97,11 @@ class DQNAgent():
 # Code to actaully train an agent
 if __name__ == "__main__":
 
-    # Initialize gym environment and the agent
+    # Initialize gym environment
     env = Blitz21GameAI()
+    # Flattens the observation space from a Dict to a Box
     env = FlattenObservation(env)
+    # Initialises the agent to play through 10000 steps
     agent = DQNAgent(env, 10000)
     agent.model.summary()
 
